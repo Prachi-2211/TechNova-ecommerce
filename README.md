@@ -32,4 +32,4 @@ A modern electronics e-commerce website built using React.js and Vite.
 - React.js
 - Vite
 - JavaScript
-- CSs
+- CSS
