@@ -64,7 +64,7 @@ export function Cart() {
 
         {/* RIGHT: SUMMARY */}
         <div style={styles.right}>
-  <h2>Price Summary</h2>
+  <h2 style={{ color: "#111" }}>Price Summary</h2>
   <p>Total Items: {orders.length}</p>
   <h3>Total: ₹{total}</h3>
 
