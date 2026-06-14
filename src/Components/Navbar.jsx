@@ -22,6 +22,12 @@ export function Navbar() {
 
        <Link style={styles.link} to="/about">About</Link>
 
+       <Link style={styles.link} to="/additems">AddItems</Link>
+
+
+       
+
+ 
        
 
       </div>

@@ -17,7 +17,7 @@ A modern electronics e-commerce website built using React.js and Vite.
 ![Home Page](Screenshots/HomePage.png)
 
 ### Products Page
-![Products Page](Screenshots/Product.png)
+![Products Page](Screenshots/Products.png)
 
 ### Cart Page
 ![Cart Page](Screenshots/Cart.png)
@@ -27,6 +27,10 @@ A modern electronics e-commerce website built using React.js and Vite.
 
 ### About Page
 ![About Page](Screenshots/About.png)
+
+### AddItems Page
+![About Page](Screenshots/AddItems.png)
+
 
 ## Technologies Used
 - React.js

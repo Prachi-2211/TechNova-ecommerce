@@ -6,6 +6,8 @@ import {Products} from "./Components/Products";
 import {About} from "./Components/About";
 import {Cart} from "./Components/Cart";
 import {Account} from "./Components/Account";
+import { AddItems } from "./Components/AddItems";
+
 
 function App() {
   return (
@@ -18,6 +20,10 @@ function App() {
         <Route path="/cart" element={<Cart/>} />
         <Route path="/account" element={<Account />} />
         <Route path="/about" element={<About />} />
+        <Route path="/additems" element={<AddItems />} />
+        
+       
+        
 
       </Routes>
 
