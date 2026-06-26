@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { supabase } from "./supabase";
 
 export function AddItems() {
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
   const [products, setProducts] = useState([]);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");

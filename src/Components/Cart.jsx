@@ -1,4 +1,8 @@
+import { useEffect } from "react";
 export function Cart() {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
   const orders = [
     {
       id: 1,

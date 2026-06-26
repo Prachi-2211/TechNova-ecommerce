@@ -1,45 +1,49 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { supabase } from "./supabase";
 
 export function Navbar() {
+  const navigate = useNavigate();
+
+  // Sign out function
+  const handleSignOut = async () => {
+    await supabase.auth.signOut();
+    navigate("/");
+  };
+
   return (
     <nav style={styles.nav}>
 
       {/* LOGO */}
       <div style={styles.logo}>
-         TechNova
+        TechNova
       </div>
 
-      {/* LINKS (React Router) */}
+      {/* LINKS */}
       <div style={styles.links}>
-
-        <Link style={styles.link} to="/">Home</Link>
-
+        <Link style={styles.link} to="/home">Home</Link>
         <Link style={styles.link} to="/products">Products</Link>
-
         <Link style={styles.link} to="/cart">Cart</Link>
-
         <Link style={styles.link} to="/account">Account</Link>
-
-       <Link style={styles.link} to="/about">About</Link>
-
-       <Link style={styles.link} to="/additems">AddItems</Link>
-
-
-       
-
- 
-       
-
+        <Link style={styles.link} to="/about">About</Link>
+        <Link style={styles.link} to="/additems">AddItems</Link>
       </div>
 
-      {/* SEARCH BAR */}
-      <div style={styles.searchBox}>
-        <input
-          type="text"
-          placeholder="Search products..."
-          style={styles.input}
-        />
-        <button style={styles.button}>Search</button>
+      {/* RIGHT SECTION */}
+      <div style={styles.rightSection}>
+        {/* SEARCH BAR */}
+        <div style={styles.searchBox}>
+          <input
+            type="text"
+            placeholder="Search products..."
+            style={styles.input}
+          />
+          <button style={styles.button}>Search</button>
+        </div>
+
+        {/* SIGN OUT BUTTON */}
+        <button onClick={handleSignOut} style={styles.signoutBtn}>
+          Sign Out
+        </button>
       </div>
 
     </nav>
@@ -79,6 +83,12 @@ const styles = {
     fontWeight: "500"
   },
 
+  rightSection: {
+    display: "flex",
+    alignItems: "center",
+    gap: "15px"
+  },
+
   searchBox: {
     display: "flex",
     gap: "6px"
@@ -97,6 +107,16 @@ const styles = {
     border: "none",
     borderRadius: "4px",
     background: "#ff9900",
+    fontWeight: "bold",
+    cursor: "pointer"
+  },
+
+  signoutBtn: {
+    padding: "6px 12px",
+    border: "none",
+    borderRadius: "4px",
+    background: "red",
+    color: "white",
     fontWeight: "bold",
     cursor: "pointer"
   }

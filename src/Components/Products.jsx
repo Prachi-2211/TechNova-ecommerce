@@ -11,6 +11,9 @@ export function Products() {
       .select("*")
       .order("id", { ascending: false });
 
+      console.log("Products:", data)
+      console.log("Error:",error)
+
     if (error) {
       console.log("Error fetching products:", error);
     } else {

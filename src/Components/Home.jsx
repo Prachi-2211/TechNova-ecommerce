@@ -1,7 +1,11 @@
+import { useEffect } from "react";
 import { Hero } from "./Hero";
 import { Categories } from "./Categories";
 
 export function Home() {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
   return (
     <div style={styles.page}>
 

@@ -1,4 +1,9 @@
+import { useEffect } from "react";
+
 export function Account() {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
   return (
     <div style={styles.page}>
 
